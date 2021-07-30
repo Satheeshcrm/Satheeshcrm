@@ -1,0 +1,9 @@
+function DisableExistingCustomerLookup() {
+   var ExistingCustomerBit = Xrm.Page.data.entity.attributes.get("new_existingcustomer").getValue();
+    if (ExistingCustomerBit == false) {
+       Xrm.Page.ui.controls.get("customerid").setVisible(false);
+    }
+    else {
+       Xrm.Page.ui.controls.get("customerid").setVisible(true);
+    }
+}   
